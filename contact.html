@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="contact">
+        <h1>Feedback</h1>
+        <form action="" class="contact-form" onsubmit="return submitform()">
+            <div class="form">
+            <label for="username">UserName:</label>
+            <input type="text" id="username" name="username">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="feedback">Feedback:</label>
+            <textarea name="feedback" id="feedback" rows="4"></textarea>
+            <button type="submit" onclick="submitform()">Submit</button>
+        </div>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    function submitform(){
+        const username=document.getElementById('username').value;
+        const email=document.getElementById('email').value;
+        const feedback=document.getElementById('feedback').value;
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        const emailverify=emailRegex.test(email);
+        if(!username||!email||!feedback){
+            alert("All Details are Neccessary.")
+        }
+        else if(!emailverify){
+            alert("Enter the Correct Email Id.")
+        }
+        else{
+            const data={
+                'username':username,
+                'email':email,
+                'feedback':feedback
+            }
+            console.log('data',data);
+        }
+    }
+</script>

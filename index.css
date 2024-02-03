@@ -1,0 +1,264 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #F2BED1;
+}
+.video-container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sidebar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background: #F8E8EE;
+    box-sizing: border-box;
+    padding: 20px;
+    color: black;
+    z-index: 2;
+    text-align: center;
+    overflow-y: auto;
+}
+.sidebar a{
+    margin-top: 20px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+.content-container{
+    margin-left: 250px;
+    padding: 20px;
+    z-index: 1;
+    overflow-x: auto;
+    /* white-space: nowrap; */
+}
+.content{
+    background: rgba(255,255,255,0.8);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.content:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+    transition: transform 0.3s;
+}
+.content h2{
+    margin-bottom: 10px;
+}
+.content p{
+    color: black
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.card-skills,.card{
+    perspective: 1000px;
+    margin: 10px;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    cursor: pointer;
+}
+.card:hover .card-inner{
+    transform: rotateY(180deg);
+}
+.card-inner{
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.front, .back{
+    background: #F9F5F6;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+.back{
+    transform: rotateY(180deg);
+}
+.card video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.img1{
+    width: 100%;
+    border-radius: 50%;
+    height: 30%;
+}
+.links{
+    margin-top: 10px;
+    font-size: 10px;
+    color: black;
+}
+.links a{
+    display: inline-block;
+    margin: 0 10px;
+}
+.links:hover{
+    cursor: pointer;
+}
+.sections{
+    margin-top: 20px;
+}
+button{
+    margin: 10px 20px 20px 10px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+.color-palette{
+    text-align: center;
+}
+.buttons-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+.color-palette input{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #F2BED1;
+    display: none;
+}
+#colorPaletteBtn{
+    background-color: #F2BED1;
+    color: #fff;
+}
+.skills-container{
+    text-align: center;
+}
+.skill{
+    display: inline-block;
+    margin: 0 20px;
+    text-align: left;
+    cursor: pointer;
+}
+.skill-name{
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.bar-container{
+    position: relative;
+    height: 20px;
+    width: 200px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.bar{
+    position: absolute;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s;
+}
+.bar-cplus{
+    width: 0;
+    background-color: #1e90ff;
+}
+.bar-python{
+    width: 0;
+    background-color: #2ecc71;
+}
+.bar-html{
+    width: 0;
+    background-color: #f39c12;
+}
+.education-container{
+    text-align: center;
+}
+.education-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.school-column{
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+.school-location{
+    max-width: 100%;
+}
+.school-name{
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.achievements-container{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.achievement-card{
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+.achievement-card:hover{
+    transform: scale(1.05);
+}
+.achievement-title{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.achievement-img img{
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+    height: auto;
+    display: block;
+}
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: static;
+        text-align: left;
+    }
+
+    .content-container {
+        margin-left: 0;
+    }
+}

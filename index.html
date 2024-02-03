@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/467c132070.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="https://res.cloudinary.com/dvnxpluf0/image/upload/v1706980398/me_2_qpflnu.jpg" alt="" class="img1">
+        <h3>Dipasha</h3>
+        <div class="links">
+            <a href="https://www.instagram.com/dipasha._.05?igsh=ZXE3bHp4cXppMGk4"><i class="fa-brands fa-instagram"><span style="padding-left: 10px;"></span></i></a>
+            <a href="https://www.linkedin.com/in/dipasha-357a43258"><i class="fa-brands fa-linkedin"><span style="padding-left: 10px;"></span></i></a>
+            <a href="https://github.com/"><i class="fa-brands fa-github"><span style="padding-left: 10px;"></span></i></a>
+        </div>
+        <div class="sections">
+        <a href="#section1" onclick="scrollToSection('section1')" class="about"><i class="fa-solid fa-user"></i><span style="padding-left: 10px;">About</span></a>
+        <a href="#section2" onclick="scrollToSection('section2')" class="projects"><i class="fa-solid fa-file"></i><span style="padding-left: 10px;">Projects</span></a>
+        <a href="#section3" onclick="scrollToSection('section3')" class="skills"><i class="fa-sharp fa-solid fa-share"></i><span style="padding-left: 10px;">Skills</span></a>
+        <a href="#section4" onclick="scrollToSection('section4')" class="education"><i class="fa-sharp fa-solid fa-graduation-cap"></i><span style="padding-left: 10px;">Education</span></a>
+        <a href="#section5" onclick="scrollToSection('section5')" class="achievements"><i class="fa-sharp fa-solid fa-award"></i><span style="padding-left: 10px;">Achievements</span></a>
+        <a href="#section6" onclick="scrollToSection('section6')" class="contact"><i class="fa-solid fa-address-book"></i><span style="padding-left: 10px;">Contact</span></a>
+    </div>
+    <div class="buttons-container">
+        <div class="color-palette">
+            <button id="colorPaletteBtn" onclick="toggleColorPicker()"><i class="fa-solid fa-palette"></i><span style="padding-left: 10px;">Color Palette</span></button>
+                <input type="color" id="colorPicker" onchange="changeThemeColor()">
+        </div>
+    </div>
+    </div>
+    <div class="content-container">
+        <section id="section1" class="content">
+            <h2>Dipasha</h2>
+            <p>Hello, I'm Dipasha, a dedicated and creative software developer with a passion for turning 
+                innovative ideas into reality. With a strong foundation in Web Development,C++. I thrive 
+                on crafting efficient and scalable solutions that bring value to users.
+            <br>
+            <br>
+                🌐 Building the Future of Technology
+                <br>
+                My journey in the world of programming has equipped me with the skills to navigate through 
+                challenges and the curiosity to constantly explore emerging technologies. 
+                <br>
+                <br>
+                🎯 My Mission: Enhancing User Experiences
+                <br>
+                My ultimate goal is to create technology that not only meets but exceeds user expectations. 
+                I am driven by the desire to contribute to projects that make a positive impact and enhance the 
+                way people interact with the digital world.
+            </p>
+        </section>
+        <section id="section2" class="content">
+            <h2>Projects</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="front">
+                            <p>Watches Website</p>
+                        </div>
+                        <div class="back">
+                            <video src="https://res.cloudinary.com/dvnxpluf0/video/upload/v1706966645/Watches_hiz5p7.mp4" autoplay muted loop></video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="front">
+                            <p>Spotify Clone</p>
+                        </div>
+                        <div class="back">
+                            <video src="https://res.cloudinary.com/dvnxpluf0/video/upload/v1706967067/Music_nioagr.mp4" autoplay muted loop></video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="front">
+                            <p>Text to Speech</p>
+                        </div>
+                        <div class="back">
+                            <video src="https://res.cloudinary.com/dvnxpluf0/video/upload/v1706968157/Speech_huovhz.mp4" autoplay muted loop></video>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="section3" class="content">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill" onclick="toggleProgress('bar-cplus')">
+                    <div class="skill-name">C++</div>
+                    <div class="bar-container">
+                        <div class="bar bar-cplus"></div>
+                    </div>
+                </div>
+
+                <div class="skill" onclick="toggleProgress('bar-python')">
+                    <div class="skill-name">Python</div>
+                    <div class="bar-container">
+                        <div class="bar bar-python"></div>
+                    </div>
+                </div>
+
+                <div class="skill" onclick="toggleProgress('bar-html')">
+                    <div class="skill-name">HTML,CSS</div>
+                    <div class="bar-container">
+                        <div class="bar bar-html"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="section4" class="content">
+            <h2>Education</h2>
+            <div class="education-container">
+                <div class="education-row">
+                    <div class="school-column">
+                        <div class="class">10<sup>th</sup></div>
+                        <div class="school-name">Mody School, Lakshmangarh</div>
+                        <div class="school-location">Location<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3529.283042928344!2d75.0326393745806!3d27.801057276129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396caba75ef1a4e5%3A0x4b2788c5dca94eab!2sMody%20school!5e0!3m2!1sen!2sin!4v1706974119542!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                    </div>
+
+                    <div class="school-column">
+                        <div class="class">12<sup>th</sup></div>
+                        <div class="school-name">B.R. School, Rajasthan</div>
+                        <div class="school-location">Location<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3535.5234309068205!2d74.89935097457217!3d27.608301076239453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396b58630dec18ef%3A0x8588e0a724303eea!2sB.R.%20Shikshan%20Sansthan%20Senior%20Secondary%20School!5e0!3m2!1sen!2sin!4v1706974230137!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section5" class="content">
+            <h2>Achievements</h2>
+            <div class="achievements-container">
+                <div class="achievement-card">
+                    <div class="achievement-title">Cyber Security</div>
+                    <div class="achievement-img">
+                        <img src="https://res.cloudinary.com/dvnxpluf0/image/upload/v1706980230/Cyber_fivgad.png" alt="">
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-title">Online Quiz</div>
+                    <div class="achievement-img">
+                        <img src="https://res.cloudinary.com/dvnxpluf0/image/upload/v1706980295/Online_Quiz_dpguh9.png" alt="">
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-title">Devtown</div>
+                    <div class="achievement-img">
+                        <img src="https://res.cloudinary.com/dvnxpluf0/image/upload/v1706980345/Devtown_c0dnnj.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section6" class="content">
+            <h2>Contact</h2>
+            <p><i class="fa-solid fa-envelope"></i><span style="padding-left: 10px;">E-mail: dipashak0505@gmail.com</span></p>
+            <p><i class="fa-solid fa-phone"></i><span style="padding-left: 10px;">Contact: 999626XXXX</span></p>
+            <div class="contact">
+                <a href="contact.html"><button>Contact</a></button>
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+    function scrollToSection(sectionId){
+        var section=document.getElementById(sectionId);
+        if(section){
+            section.style.transition='transform 0.3s';
+            section.style.transform='translateY(-5px)';
+            section.scrollIntoView({behavior:'smooth'});
+            setTimeout(function(){
+                section.style.transition='';
+                section.style.transform='';
+            },300);
+        }
+    }
+    function changeThemeColor(){
+        var colorPicker=document.getElementById('colorPicker');
+        var selectedColor=colorPicker.value;
+        document.body.style.backgroundColor=selectedColor;
+        document.querySelector('.sidebar').style.backgroundColor=selectedColor;
+    }
+    function toggleColorPicker(){
+        var colorPickerInput=document.getElementById('colorPicker');
+        colorPickerInput.style.display=(colorPickerInput.style.display==='none'||colorPickerInput.style.display==='')?'inline-block':'none';
+    }
+    function toggleProgress(barClass){
+        const bar=document.querySelector(`.${barClass}`);
+        if(bar.style.width===' ' || bar.style.width==='0%'){
+            bar.style.width=getInitialWidth(barClass);
+        }
+        else{
+            bar.style.width='0%';
+        }
+    }
+    function getInitialWidth(barClass){
+        switch(barClass){
+            case 'bar-cplus':
+                return '80%';
+            case 'bar-python':
+                return '70%';
+            case 'bar-html':
+                return '85%';
+            default:
+                return '0%';
+        }
+    }
+</script>
+</html>
